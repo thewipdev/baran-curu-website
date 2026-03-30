@@ -104,7 +104,7 @@ const Index = () => {
           <ScrollReveal delay={0.2}>
             <p className="text-muted-foreground leading-relaxed text-lg">
               Şu anda Türkiye Emlak Katılım Bankası'nda Bilgi Güvenliği Yönetimi Uzmanı olarak görev yapıyorum.
-              Yeni projeler, iş birlikleri ve fikir alışverişine her zaman açığım — tanışmak isterseniz takvimden kolayca randevu alabilirsiniz.
+              Yeni projeler, iş birlikleri ve fikir alışverişine her zaman açığım. Tanışmak isterseniz takvimden kolayca randevu alabilirsiniz.
             </p>
           </ScrollReveal>
         </div>
