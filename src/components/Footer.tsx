@@ -38,9 +38,20 @@ const Footer = () => (
       <p className="text-sm text-muted-foreground font-serif italic">
         "Değer zincirlerinin peşinde, neşeyle, akış halinde."
       </p>
-      <p className="text-xs text-muted-foreground">
-        © {new Date().getFullYear()} Baran Curu
-      </p>
+      <div className="flex items-center justify-between w-full text-xs text-muted-foreground">
+        <p>© {new Date().getFullYear()} Baran Curu</p>
+        <p>
+          designed by{" "}
+          <a
+            href="https://wipdev.com.tr"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground/60 hover:text-foreground transition-colors duration-300"
+          >
+            wipdev
+          </a>
+        </p>
+      </div>
     </div>
   </footer>
 );
