@@ -10,9 +10,12 @@ const navItems = [
 ];
 
 const socials = [
+  // Sayın Curu LinkedIn linki buraya
   { icon: Linkedin, href: "https://www.linkedin.com/in/barancuru/", label: "LinkedIn" },
   { icon: Youtube, href: "https://www.youtube.com/@barancuru", label: "YouTube" },
+  // Sayın Curu Twitter linki buraya
   { icon: Twitter, href: "https://twitter.com/ABaranCuru", label: "Twitter" },
+  // Sayın Curu Instagram linki buraya
   { icon: Instagram, href: "https://www.instagram.com/bfrancuru", label: "Instagram" },
   { icon: BookOpen, href: "https://medium.com/@barancuru", label: "Medium" },
 ];
@@ -41,18 +44,17 @@ const Navbar = () => {
       <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           to="/"
-          className="font-serif text-xl font-semibold tracking-tight text-foreground hover:text-accent transition-colors"
+          className="font-serif text-xl font-semibold tracking-tight text-foreground hover:text-accent transition-colors duration-300"
         >
           Baran Curu
         </Link>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
-              className={`text-sm font-medium tracking-wide transition-colors relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px] after:bg-accent after:transition-all after:duration-300 ${
+              className={`text-sm font-medium tracking-wide transition-colors duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[1.5px] after:bg-accent after:transition-all after:duration-300 ${
                 location.pathname === item.path
                   ? "text-foreground after:w-full"
                   : "text-muted-foreground hover:text-foreground after:w-0 hover:after:w-full"
@@ -72,7 +74,7 @@ const Navbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={s.label}
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-foreground transition-colors duration-300"
               >
                 <s.icon size={16} strokeWidth={1.5} />
               </a>
@@ -80,7 +82,6 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-foreground"
@@ -90,13 +91,13 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
             className="md:hidden bg-background/95 backdrop-blur-lg border-b border-border overflow-hidden"
           >
             <div className="px-6 py-4 flex flex-col gap-4">
@@ -104,7 +105,7 @@ const Navbar = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`text-sm font-medium ${
+                  className={`text-sm font-medium transition-colors duration-300 ${
                     location.pathname === item.path
                       ? "text-foreground"
                       : "text-muted-foreground"
@@ -121,7 +122,7 @@ const Navbar = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground hover:text-foreground transition-colors duration-300"
                   >
                     <s.icon size={18} strokeWidth={1.5} />
                   </a>

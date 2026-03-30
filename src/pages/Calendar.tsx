@@ -1,6 +1,9 @@
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 
+// Sayın Curu Takvim linki buraya koyulacak
+const CALENDLY_URL = "https://calendly.com/barancuru";
+
 const Calendar = () => (
   <Layout>
     <section className="py-24 px-6">
@@ -17,7 +20,7 @@ const Calendar = () => (
         <ScrollReveal delay={0.15}>
           <div className="rounded-lg border border-border overflow-hidden bg-card">
             <iframe
-              src="https://calendly.com/barancuru"
+              src={CALENDLY_URL}
               width="100%"
               height="660"
               frameBorder="0"
