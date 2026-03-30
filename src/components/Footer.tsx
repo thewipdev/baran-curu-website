@@ -2,8 +2,11 @@ import { Youtube, Linkedin, Twitter, Instagram, BookOpen, Mail } from "lucide-re
 
 const socials = [
   { icon: Youtube, href: "https://www.youtube.com/@barancuru", label: "YouTube" },
+  // Sayın Curu LinkedIn linki buraya
   { icon: Linkedin, href: "https://www.linkedin.com/in/barancuru/", label: "LinkedIn" },
+  // Sayın Curu Twitter linki buraya
   { icon: Twitter, href: "https://twitter.com/ABaranCuru", label: "Twitter" },
+  // Sayın Curu Instagram linki buraya
   { icon: Instagram, href: "https://www.instagram.com/bfrancuru", label: "Instagram" },
   { icon: BookOpen, href: "https://medium.com/@barancuru", label: "Medium" },
 ];
