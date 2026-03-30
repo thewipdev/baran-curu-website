@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import ScrollReveal from "@/components/ScrollReveal";
 
-// Sayın Curu Takvim linki buraya koyulacak
+
 const CALENDLY_URL = "https://calendly.com/barancuru";
 
 const Calendar = () => (
