@@ -96,15 +96,15 @@ const Index = () => {
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
             <p className="text-muted-foreground leading-relaxed text-lg mb-4">
-              Bankacılık ve enerji sektörlerinde bilgi güvenliği, GRC (Governance, Risk & Compliance) ve
-              siber güvenlik alanlarında 5+ yıl deneyime sahibim. ISO 27001 Lead Auditor ve Lead Implementer
-              sertifikalarıyla kurumsal güvenlik süreçlerini tasarlıyor ve yönetiyorum.
+              Bankacılık ve enerji sektörlerinde bilgi güvenliği, GRC ve siber güvenlik alanlarında
+              5 yılı aşkın deneyime sahibim. ISO 27001 Lead Auditor ve Lead Implementer olarak
+              kurumsal güvenlik mimarilerini tasarlıyor, risk yönetimi süreçlerini yönetiyorum.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={0.2}>
             <p className="text-muted-foreground leading-relaxed text-lg">
-              Türkiye Emlak Katılım Bankası'nda Bilgi Güvenliği Yönetimi Uzmanı olarak görev yapıyorum.
-              Aynı zamanda TEVED Derneği'nin kurucu başkanlığını yürütüyor, GDG Samsun'da organizatörlük yapıyorum.
+              Şu anda Türkiye Emlak Katılım Bankası'nda Bilgi Güvenliği Yönetimi Uzmanı olarak görev yapıyorum.
+              Yeni projeler, iş birlikleri ve fikir alışverişine her zaman açığım — tanışmak isterseniz takvimden kolayca randevu alabilirsiniz.
             </p>
           </ScrollReveal>
         </div>
