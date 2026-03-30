@@ -1,13 +1,20 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Youtube, Linkedin, Twitter, Instagram, BookOpen } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { label: "Ana Sayfa", path: "/" },
   { label: "Blog", path: "/blog" },
   { label: "Takvim", path: "/takvim" },
   { label: "İletişim", path: "/iletisim" },
+];
+
+const socials = [
+  { icon: Linkedin, href: "https://www.linkedin.com/in/barancuru/", label: "LinkedIn" },
+  { icon: Youtube, href: "https://www.youtube.com/@barancuru", label: "YouTube" },
+  { icon: Twitter, href: "https://twitter.com/ABaranCuru", label: "Twitter" },
+  { icon: Instagram, href: "https://www.instagram.com/bfrancuru", label: "Instagram" },
+  { icon: BookOpen, href: "https://medium.com/@barancuru", label: "Medium" },
 ];
 
 const Navbar = () => {
@@ -40,7 +47,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <Link
               key={item.path}
@@ -54,6 +61,23 @@ const Navbar = () => {
               {item.label}
             </Link>
           ))}
+
+          <div className="w-px h-4 bg-border mx-1" />
+
+          <div className="flex items-center gap-3">
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <s.icon size={16} strokeWidth={1.5} />
+              </a>
+            ))}
+          </div>
         </div>
 
         {/* Mobile toggle */}
@@ -89,6 +113,20 @@ const Navbar = () => {
                   {item.label}
                 </Link>
               ))}
+              <div className="flex items-center gap-4 pt-2 border-t border-border">
+                {socials.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.label}
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <s.icon size={18} strokeWidth={1.5} />
+                  </a>
+                ))}
+              </div>
             </div>
           </motion.div>
         )}
