@@ -1,39 +1,59 @@
 
-# Baran CURU — Premium Minimalist Kişisel Site
 
-## Genel Tasarım
-- **Açık/beyaz minimalist** tema, bol beyaz alan, ince tipografi (Apple estetiği)
-- Accent renk: Zarif koyu lacivert/siyah, tek bir vurgu rengi (örn. mavi veya altın tonu)
-- Scroll-tetiklemeli animasyonlar (fade-in, slide-up, stagger efektleri)
+# Baran Curu — Premium Minimalist Kişisel Site Yeniden Tasarım
 
-## Sayfalar & Bölümler
+## Kişi Profili (CV & LinkedIn'den)
+- **Bilgi Güvenliği Profesyoneli**, ISO 27001 Lead Auditor/Implementer
+- Türkiye Emlak Katılım Bankası'nda Bilgi Güvenliği Yönetimi Uzmanı (güncel)
+- TEVED Derneği Kurucu Başkanı, GDG Samsun Organizatör
+- YEDAŞ'ta Kıdemli Siber Güvenlik & GRC Uzmanı (önceki)
+- Eksim Holding'de Bilgi Güvenliği Uzmanı (3+ yıl)
+- Dicle Üniversitesi Lisans, Anadolu Üniversitesi Yüksek Lisans
+- Red Bull Student Brand Manager, McKinsey Forward, Aspire Leaders Alumni
+- İlgi: Psikoloji, Gezi, Bisiklet, Satranç, Sinema
 
-### 1. Ana Sayfa (Hero + Özet)
-- **Animasyonlu hero**: İsim büyük tipografiyle typing/reveal efektiyle belirir, altında tek cümlelik unvan/motto ("Değer zincirlerinin peşinde, neşeyle, akış halinde")
-- Scroll-down göstergesi (animasyonlu ok)
-- Aşağı kaydırınca: Kısa bio bölümü (2-3 cümle) fade-in ile
-- Son blog yazılarının kartları (3 adet, hover efektli)
-- Sosyal medya ikonları (YouTube, Medium, LinkedIn, Twitter, Instagram vb.) — minimal, tek renk
+## Tasarım Değişiklikleri
 
-### 2. Blog Sayfası
-- Statik içerik olarak mevcut 3 blog yazısı taşınacak
-- Temiz liste görünümü: Başlık, tarih, kısa açıklama, kapak görseli
-- Blog detay sayfası: Okunabilir tipografi, geniş marjinler
+### 1. Navbar — Sosyal medya linkleri öncelikli
+- Navbar'a sosyal medya ikonlarını ekle (YouTube, LinkedIn, Twitter, Instagram, Medium)
+- Sağ tarafta nav linkleri + sosyal ikonlar yan yana
+- Navbardan "Ana Sayfa" kaldır, logo zaten yönlendiriyor
+- Nav: Blog | Takvim | İletişim + sosyal ikonlar
 
-### 3. Takvim Sayfası
-- Calendly embed widget entegrasyonu
-- Kısa açıklama metni üstte
+### 2. Ana Sayfa — Etkileyici ama minimalist
+- **Hero bölümü yeniden tasarım:**
+  - İsim + unvan: "Bilgi Güvenliği Profesyoneli" alt başlık
+  - Motto kalıyor: "Değer zincirlerinin peşinde, neşeyle, akış halinde."
+  - Sosyal medya ikonları hero içinde belirgin şekilde
+  - CTA butonları: "Takvimden Randevu Al" + "İletişime Geç"
+  
+- **Hakkımda bölümü — CV'den zenginleştirilmiş:**
+  - Kısa profesyonel özet (GRC, SOC, ISO 27001, enerji/bankacılık sektörleri)
+  - Uzmanlık alanları kartları (GRC & Compliance, SOC & Incident Response, Risk Management vb.)
+  - Deneyim highlights: Türkiye Emlak Katılım, YEDAŞ, Eksim Holding — minimal timeline
+  - Sertifikalar: ISO 27001 LA/LI badge'leri
+  - Gönüllülük: TEVED, GDG Samsun, Aspire Leaders
+  
+- **Blog yazıları bölümü KALDIRILACAK** ana sayfadan — sadece navbar'dan erişilebilir
 
-### 4. İletişim Sayfası
-- E-posta linki + sosyal medya linkleri
-- Basit iletişim formu (isim, e-posta, mesaj — frontend-only, toast bildirimi)
+- **Takvim embed veya CTA** — ana sayfanın altına Calendly embed veya belirgin "Görüşme Planla" bölümü
 
-### Ortak Elemanlar
-- **Navbar**: Sabit üst menü, scroll'da hafif blur/transparanlık, logo sol / linkler sağ
-- **Footer**: Copyright, sosyal ikonlar, motto
-- **Animasyonlar**: Tüm bölümler scroll ile görünür olduğunda fade-in/slide-up, hover'da kartlarda subtle scale efekti
+### 3. Footer — Sosyal medya daha belirgin
+- Sosyal ikonlar daha büyük, hover efektli
+- E-posta linki belirgin
+- Motto + copyright
 
-### Blog İçerikleri (Statik)
-1. "SaaS Cost Optimization: Integrated Digital Systems Perspective"
-2. "Making the flow predictable"  
-3. "2020'de Okuduklarımdan Alıntılarım"
+### 4. Blog, Takvim, İletişim sayfaları
+- Mevcut yapıları korunacak, sadece küçük stil iyileştirmeleri
+
+## Teknik Detaylar
+
+| Dosya | Değişiklik |
+|-------|-----------|
+| `src/components/Navbar.tsx` | Sosyal medya ikonları ekleme, nav yapısı güncelleme |
+| `src/pages/Index.tsx` | Hero yeniden tasarım, hakkımda bölümünü CV ile zenginleştirme, blog preview kaldırma, CTA butonları ekleme |
+| `src/components/Footer.tsx` | Sosyal ikonları büyütme, e-posta belirginleştirme |
+| `src/index.css` | Animasyon ve stagger efektleri güçlendirme |
+
+Blog yazıları ve diğer sayfalar mevcut halleriyle kalacak.
+
