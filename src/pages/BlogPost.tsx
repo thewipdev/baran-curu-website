@@ -21,7 +21,6 @@ const BlogPost = () => {
     );
   }
 
-  // Simple markdown-like rendering
   const renderContent = (content: string) => {
     return content.split("\n").map((line, i) => {
       const trimmed = line.trim();
