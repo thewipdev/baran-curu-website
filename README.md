@@ -1,0 +1,1 @@
+Mr. Curu'ya hediye
